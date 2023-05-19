@@ -3,11 +3,21 @@ body {
   margin: 0;
   padding: 0;
   background-color: aliceblue;
-  font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
-    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  /* font-family: 'Noto Sans SC', "Consolas", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif; */
+  /* font-family: 'Noto Sans SC', sans-serif; */
+  /* font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace; */
+}
+
+/* 导入思源黑体并设置仅用于中文字符 */
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('https://fonts.gstatic.com/s/notosanssc/v1/-noto-sans-sc-black.woff2') format('woff2');
+  unicode-range: U+4E00-9FFF; /* 中文字符范围 */
 }
 
 h1 {
+  font-family: 'Noto Sans SC';
   position: relative;
   top: 20px;
   font-size: 50px;
@@ -17,6 +27,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Noto Sans SC';
   position: relative;
   top: 20px;
   font-size: 40px;
@@ -44,6 +55,8 @@ a:hover {
 }
 
 .text {
+  font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
   position: relative;
   transition: color 4s;
   color: rgb(240, 248, 255, 0);
