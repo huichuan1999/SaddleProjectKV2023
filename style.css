@@ -1,9 +1,32 @@
 html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
-  padding: 0;
-/*   background-color: rgb(0,0,20); */
+  background: #f0f0f0;
+  overflow: hidden; /* 防止尺寸溢出 */
 }
 canvas {
   display: block;
-
+  max-height: 100vh;
+  max-width: 100vw;
 }
+
+@media screen and (orientation: landscape) {
+  /* 横向屏幕，如电脑屏幕 */
+  canvas {
+    height: 100vh;
+    width: auto;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  /* 纵向屏幕，如手机屏幕 */
+  canvas {
+    width: 100vw;
+    height: auto;
+  }
+}
+

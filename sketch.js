@@ -5,7 +5,7 @@ let zoff = 0;
 let noiseCircles = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(600,800);
   background(0,0,50);
   frameRate(60);
 
