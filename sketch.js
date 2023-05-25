@@ -75,9 +75,11 @@ function draw() {
   } 
 }
 
-// function mousePressed() {
-//   exportSVG();
-// }
+function keyPressed() {
+  if (keyCode === 32){
+    exportSVG();
+  }
+}
 
 function exportSVG() {
   save("mySVG.svg"); // give file name
