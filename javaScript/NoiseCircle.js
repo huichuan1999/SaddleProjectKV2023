@@ -131,7 +131,7 @@ class NoiseCircle {
     push();
     translate(this.location.x, this.location.y);
     //stroke(255, 255, 200,50);
-    stroke(255,255,230,150);
+    stroke(255,255,230,100);
     strokeWeight(0.5);
 
     let alpha1 = 5;
