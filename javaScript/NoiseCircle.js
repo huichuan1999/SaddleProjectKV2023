@@ -3,7 +3,7 @@ class NoiseCircle {
     this.location = new createVector(_x, _y);
     this.br = _br;
     //this.color = color(255, 152, 0, 20);
-    this.color = color(135,206,250);
+    this.color = color(120,120,255);
     this.coreColor = color(255, 0, 0);
     this.velocity = new createVector(random(-0.7, 0.7), random(-0.7, 0.7))
     this.zoffUpdate = zoffUpdate;
@@ -93,8 +93,8 @@ class NoiseCircle {
 
     let angle = noise(this.location.x / 500, this.location.y / 500, frameCount / 20) * TWO_PI * 2; //0-2PI
 
-    this.location.x += this.velocity.x * cos(angle) ;
-    this.location.y += this.velocity.y * sin(angle) ;
+    this.location.x += this.velocity.x * cos(angle) *2;
+    this.location.y += this.velocity.y * sin(angle) *2;
     
   }
 
@@ -131,7 +131,7 @@ class NoiseCircle {
     push();
     translate(this.location.x, this.location.y);
     //stroke(255, 255, 200,50);
-    stroke(255,255,230, 100);
+    stroke(255,255,230,150);
     strokeWeight(0.5);
 
     let alpha1 = 5;
@@ -158,7 +158,7 @@ class NoiseCircle {
     fill(255, 255, 200, alpha1);
     ellipse(0, 0, r + this.br * 30);
 
-    fill(70,70,255, alpha2);
+    fill(150,70,255, alpha2);
     ellipse(0, 0, r + this.br * 20);
 
     pop();

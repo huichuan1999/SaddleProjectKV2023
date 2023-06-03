@@ -54,9 +54,12 @@ function setup() {
     let zoffUpdate1 = random(0.001, 0.0001);
     let noiseMax1 = random(0, 1.5);
 
-    noiseCircles[i] = new NoiseCircle(random(width), random(height),
-      random(0.2, 1.2),// the original size
-      zoffUpdate1, noiseMax1);
+    // noiseCircles[i] = new NoiseCircle(random(width), random(height),
+    //   random(0.2, 1.2),// the original size
+    //   zoffUpdate1, noiseMax1);
+    noiseCircles[i] = new NoiseCircle(width/2, height/2,
+    random(0.2, 1.2),// the original size
+    zoffUpdate1, noiseMax1);
   }
   addGUI();
 
@@ -116,18 +119,19 @@ function draw() {
           overlapping = true;
           //stroke(230, 238, 156, 100);
           stroke(255, 255, 0, 170);
-          strokeWeight(2);
+          strokeWeight(1);
           line(noiseCircles[i].location.x, noiseCircles[i].location.y,
             noiseCircles[j].location.x, noiseCircles[j].location.y);
         }
       }
       //change color
       if (overlapping) {
-        noiseCircles[i].changeColor(color(242,186,255, 20));
+        noiseCircles[i].changeColor(color(120,120,255, 20));
         noiseCircles[i].changeCoreColor(color(255,152,61));
       } else {
         //noiseCircles[i].changeColor(color(230, 238, 156, 25));
-        noiseCircles[i].changeColor(color(120,120,255,25));
+        
+        noiseCircles[i].changeColor(color(242,186,255,25));
         noiseCircles[i].changeCoreColor(color(255, 255, 153));
       }
     }
