@@ -3,7 +3,7 @@ class NoiseCircle {
     this.location = new createVector(_x, _y);
     this.br = _br;
     //this.color = color(255, 152, 0, 20);
-    this.color = color(70,130,180);
+    this.color = color(135,206,250);
     this.coreColor = color(255, 0, 0);
     this.velocity = new createVector(random(-0.7, 0.7), random(-0.7, 0.7))
     this.zoffUpdate = zoffUpdate;
@@ -131,8 +131,8 @@ class NoiseCircle {
     push();
     translate(this.location.x, this.location.y);
     //stroke(255, 255, 200,50);
-    stroke(255, 100);
-    strokeWeight(1);
+    stroke(255,255,230, 100);
+    strokeWeight(0.5);
 
     let alpha1 = 5;
 
@@ -154,11 +154,11 @@ class NoiseCircle {
 
     //draw core
     let alpha2 = map(r, 0, 0.5, 20, 255);
-
+    //noFill();
     fill(255, 255, 200, alpha1);
     ellipse(0, 0, r + this.br * 30);
 
-    fill(this.coreColor, alpha2);
+    fill(100,100,255, alpha2);
     ellipse(0, 0, r + this.br * 20);
 
     pop();

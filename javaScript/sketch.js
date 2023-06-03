@@ -114,19 +114,19 @@ function draw() {
         if (noiseCircles[j] != noiseCircles[i] && noiseCircles[i].communication(noiseCircles[j])) {
           overlapping = true;
           //stroke(230, 238, 156, 100);
-          stroke(255, 255, 200, 170);
-          strokeWeight(4);
+          stroke(255, 255, 0, 170);
+          strokeWeight(2);
           line(noiseCircles[i].location.x, noiseCircles[i].location.y,
             noiseCircles[j].location.x, noiseCircles[j].location.y);
         }
       }
       //change color
       if (overlapping) {
-        noiseCircles[i].changeColor(color(135,206,250, 20));
-        noiseCircles[i].changeCoreColor(color(255, 255, 153));
+        noiseCircles[i].changeColor(color(242,186,255, 20));
+        noiseCircles[i].changeCoreColor(color(255,152,61));
       } else {
         //noiseCircles[i].changeColor(color(230, 238, 156, 25));
-        noiseCircles[i].changeColor(color(135,206,250,25));
+        noiseCircles[i].changeColor(color(143,166,255,25));
         noiseCircles[i].changeCoreColor(color(255, 255, 153));
       }
     }
