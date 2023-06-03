@@ -1,32 +1,236 @@
-html, body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+html,
+body {
   margin: 0;
-  background: #f0f0f0;
-  overflow: hidden; /* 防止尺寸溢出 */
+  padding: 0;
+  background-color: aliceblue;
+  font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
+
+h1 {
+  position: relative;
+  top: 20px;
+  font-size: 50px;
+  color: rgba(0, 70, 70, 0.8);
+  text-align: center;
+  z-index: 0;
+}
+
+h2 {
+  position: relative;
+  top: 20px;
+  font-size: 40px;
+  color: rgb(0, 70, 70, 0.5);
+  text-align: center;
+  z-index: 0;
+}
+
 canvas {
   display: block;
-  max-height: 100vh;
-  max-width: 100vw;
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  z-index: 1;
 }
 
-@media screen and (orientation: landscape) {
-  /* 横向屏幕，如电脑屏幕 */
-  canvas {
-    height: 100vh;
-    width: auto;
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: color 0.01s;
+  color: red;
+}
+
+.text {
+  position: relative;
+  transition: color 4s;
+  color: rgb(240, 248, 255, 0);
+  font-size: 18px;
+  line-height: 120%;
+  z-index: 10;
+}
+
+.text:hover {
+  transition: color 0.01s;
+  color: crimson;
+}
+
+.codeText {
+  font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  position: fixed;
+  font-size: 20px;
+}
+
+.inline-div {
+  display: inline-block;
+}
+
+.centered-wrapper {
+  /* width: 1000px; */
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  padding-top: 50px;
+}
+
+.button {
+  background-color: rgb(255, 255, 255, 0.75);
+  border: dotted 2px;
+  border-radius: 20px;
+  color: rgb(0, 50, 50);
+  padding: 10px 17px;
+  margin-right: 10px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  width: 20%;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.ascii-art {
+  position: absolute;
+  z-index: 0;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  color: lightblue;
+}
+
+.dashed-border {
+  position: fixed;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 98%;
+  height: 98%;
+  transform: translate(-50%, -50%);
+  /* border: 24px solid rgb(149, 172, 199);
+  border-radius: 20px; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+#sketch-container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#gui-container {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  bottom: 0px;
+  z-index: 20;
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0, 0);
+}
+
+#slider-container {
+  display: flex;
+  flex-direction: row;
+
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+#color-picker {
+  position: absolute;
+  z-index: 10;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  body {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .centered-wrapper {
+    /* width: 1000px; */
+    width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 50px;
+  }
+
+  .button {
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 10px;
+    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+
+  #gui-container>div:nth-child(2) {
+    margin-left: 0;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+  }
+
+  #sketch-container {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #gui-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: flex-end; */
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+
+  #mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+  #circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    z-index: 999;
   }
 }
-
-@media screen and (orientation: portrait) {
-  /* 纵向屏幕，如手机屏幕 */
-  canvas {
-    width: 100vw;
-    height: auto;
-  }
-}
-

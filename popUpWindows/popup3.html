@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>photomicrography aesthetics</title>
+</head>
+<body>
+  <img id="myImage" src="" alt="random image" style="width: 100vw;">
+<script>
+  const images = ["11.jpg", "12.jpg", "13.jpg","14.jpg" ];
+
+  const randomIndex = Math.floor(Math.random() * images.length);
+
+  const img = document.getElementById("myImage");
+
+  img.src = images[randomIndex];
+</script>
+
+</body>
+</html>

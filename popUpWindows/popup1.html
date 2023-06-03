@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>creatures</title>
+
+</head>
+<body>
+  <div>
+    <img id="myImage" src="" alt="random image" style="width: 100vw;">
+<script>
+  // picture array
+  const images = ["1.png", "2.png", "3.png", "4.png","5.png","6.png","7.png","8.png","9.png"];
+
+  const randomIndex = Math.floor(Math.random() * images.length);
+
+  // get image element
+  const img = document.getElementById("myImage");
+
+  // change image source
+  img.src = images[randomIndex];
+</script>
+
+  </div>
+</body>
+</html>
