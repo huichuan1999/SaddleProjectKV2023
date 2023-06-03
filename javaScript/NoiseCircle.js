@@ -93,8 +93,8 @@ class NoiseCircle {
 
     let angle = noise(this.location.x / 500, this.location.y / 500, frameCount / 20) * TWO_PI * 2; //0-2PI
 
-    this.location.x += this.velocity.x * cos(angle) * 3;
-    this.location.y += this.velocity.y * sin(angle) * 3;
+    this.location.x += this.velocity.x * cos(angle) ;
+    this.location.y += this.velocity.y * sin(angle) ;
     
   }
 
@@ -158,7 +158,7 @@ class NoiseCircle {
     fill(255, 255, 200, alpha1);
     ellipse(0, 0, r + this.br * 30);
 
-    fill(100,100,255, alpha2);
+    fill(70,70,255, alpha2);
     ellipse(0, 0, r + this.br * 20);
 
     pop();

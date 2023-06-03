@@ -65,7 +65,8 @@ function setup() {
 function draw() {
   foodPG.clear();
   foodPG.background(0, 0, 0, 0);
-  vol = mic.getLevel() * 7;
+  //vol = mic.getLevel() * 7;
+  vol = 0.3;
   //console.log(vol);
   
   if (frameCount % 2 == 0)randomPoints();//the background color
@@ -126,7 +127,7 @@ function draw() {
         noiseCircles[i].changeCoreColor(color(255,152,61));
       } else {
         //noiseCircles[i].changeColor(color(230, 238, 156, 25));
-        noiseCircles[i].changeColor(color(143,166,255,25));
+        noiseCircles[i].changeColor(color(120,120,255,25));
         noiseCircles[i].changeCoreColor(color(255, 255, 153));
       }
     }
