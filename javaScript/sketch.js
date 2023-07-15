@@ -47,8 +47,8 @@ function setup() {
   foodPG = createGraphics(windowWidth, windowHeight);
   foodPG.parent("sketch-container");
 
-  mic = new p5.AudioIn();
-  mic.start();
+  // mic = new p5.AudioIn();
+  // mic.start();
 
   for (let i = 0; i < 12; i++) {
     let zoffUpdate1 = random(0.001, 0.0001);

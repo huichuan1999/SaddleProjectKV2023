@@ -3,8 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color:white;
-  font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
-    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  font-family: "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
   /* background-image: url(../assets/BG01.png); */
   background-size: cover;
   /* background-repeat: no-repeat; */
@@ -27,6 +26,25 @@ h2 {
   color: rgb(0, 70, 70, 0.5);
   text-align: center;
   z-index: 0;
+}
+
+h3{
+  position: relative;
+  top: 20px;
+  font-size: 30px;
+  color: rgb(0, 70, 70, 0.5);
+  text-align: center;
+  z-index: 0;
+}
+
+h5{
+  position: absolute; /* 让元素脱离常规文档流，可以按照 top、bottom、left、right 精确定位 */
+  bottom: 0; /* 置于父元素的底部 */
+  left: 50%; /* 在水平方向上，置于父元素的中间 */
+  transform: translateX(-50%); /* 用于调整元素的位置，把元素的中心点移到父元素的中心 */
+  text-align: center; /* 让文字居中 */
+  font-size: 20px;
+  color: rgb(0, 70, 70, 0.5);
 }
 
 canvas {
