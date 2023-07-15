@@ -2,10 +2,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color:black;
+  background-color:white;
   font-family: "Consolas", "Monaco", "Lucida Console", "Liberation Mono",
     "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
-  background-image: url(../assets/BG01.png);
+  /* background-image: url(../assets/BG01.png); */
   background-size: cover;
   /* background-repeat: no-repeat; */
   background-position: center center;
@@ -82,10 +82,10 @@ a:hover {
 }
 
 .button {
-  background-color: rgb(255, 255, 255, 0.75);
+  background-color: rgb(255, 255, 255);
   border: dotted 2px;
   border-radius: 20px;
-  color: rgb(0, 50, 50);
+  color: rgb(255,255,0);
   padding: 10px 17px;
   margin-right: 10px;
   text-align: center;
@@ -115,10 +115,10 @@ a:hover {
   width: 98%;
   height: 98%;
   transform: translate(-50%, -50%);
-  /* border: 24px solid rgb(149, 172, 199);
-  border-radius: 20px; */
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  border: 24px solid rgba(200,200,0,0.1) ;
+  border-radius: 20px;
+  background: linear-gradient(0deg, rgba(200,200,0,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,200,0,0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
